@@ -1,38 +1,331 @@
-.App {
+@font-face {
+  font-family: BlenderPro;
+  src: url("BlenderPro-Bold.ttf");
+}
+
+.overall_layout {
+  width: 100%;
+  background-image: linear-gradient(to right, red, yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_container {
+  width: 70%;
+  height: 85%;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation_bar {
+  flex-basis: 15%;
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.app_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.flex_container {
+  flex-basis: 85%;
+  width: 100%;
+  display: flex;
+}
+
+.food_navigation {
+  flex-basis: 30%;
+  display: grid;
+  grid-template-rows: repeat(12, 90px);
+  flex-direction: column;
+  background-color: rgb(190, 190, 190);
+  border-radius: 0 0 0 20px;
+}
+
+.page_controller {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.page_controller button {
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.page_controller button:hover {
+  background-color: rgb(179, 179, 179);
+  cursor: pointer;
+}
+
+.food_content {
+  flex-basis: 70%;
+  background-color: rgb(223, 223, 223);
+}
+
+.food_content_recipe_grid {
+  display: grid;
+  grid-template-rows: 200px 70px 1fr;
+}
+
+.food_content_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.food_content_img_title {
+  position: absolute;
+  top: 200px;
+  background-color: rgb(255, 69, 0, 0.7);
+  max-width: 30%;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.food_content_time {
+  display: flex;
+  width: 100%;
+  background-color: rgb(173, 173, 173);
+  justify-content: space-around;
+  /* align-items: center; */
+  /* background-size: contain; */
+}
+
+.time_content {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* gap: 350px; */
+}
+
+.time_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.serving_button {
+  /* padding: 2px; */
+  cursor: pointer;
+  background-color: azure;
+  border-radius: 20px;
+  border: none;
+}
+
+.serving_button:hover {
+  background-color: rgb(201, 216, 216);
+}
+
+.food_content_main_recipes {
+  width: 100%;
+  text-align: center;
+  /* margin: auto; */
+  background-color: rgb(221, 221, 221);
+  display: grid;
+  grid-template-rows: 70px 740px;
+  border-radius: 0 0 20px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.food_navigation_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.food_ingredients {
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1fr 1fr; */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.food_ingredients li {
+  padding: 20px;
+  list-style-type: circle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav_img,
+.time_img {
+  width: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav_img:hover {
+  cursor: pointer;
+  background-color: azure;
+}
+
+.nav_icon_container {
+  display: flex;
+  align-items: center;
+}
+
+.nav_icon_container button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 5px;
+  border: none;
+}
+.food_item p {
+  margin: 0;
+}
+
+.food_item {
+  flex-basis: 18%;
+  display: flex;
+  padding-right: 30px;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: left;
+  font-family: "Arial";
+  font-size: 16px;
+}
+
+.search_bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search_bar button {
+  cursor: pointer;
+  padding: 5px;
+  width: 100px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, red, yellow);
+  color: "white";
+}
+
+.search_bar input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.food_item:hover {
+  cursor: pointer;
+  background-color: rgb(177, 177, 177);
+}
+
+.food_publisher {
+  color: rgb(78, 78, 78);
+}
+
+.food_item img {
+  width: 80px;
+  padding: 0 10px;
+  border-radius: 100%;
+  height: 70px;
+  object-fit: cover;
+}
+
+.bookmarks_close_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmarks_close_div button {
+  padding: 10px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, red, yellow);
+}
+
+.food_img {
+  width: 100%;
+  object-fit: unset;
+  height: auto;
+}
+
+.bookmark_item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bookmark_item:hover {
+  cursor: pointer;
+  background-color: rgb(177, 177, 177);
+}
+
+.bookmark_item_title {
+  width: 100%;
+}
+
+.add_recipe_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.recipe_data,
+.ingredients_data {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.input_field {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.new_recipe_actions {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 50px;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav_icon_container button:hover {
+  background-color: rgb(177, 177, 177);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bookmarks_modal {
+  width: 50%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.bookmarks_modal_grid {
+  display: grid;
+  font-family: "BlenderPro";
+  font-size: 20px;
+  grid-template-rows: repeat(5, 60px);
+}
+
+.bookmark_actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-top: 50px;
+  /* align-items: flex-end; */
+}
+
+.bookmark_delete {
+  cursor: pointer;
 }
