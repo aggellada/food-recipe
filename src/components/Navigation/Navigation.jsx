@@ -15,7 +15,7 @@ export default function Navigation({
           alt="RecipeQuest Logo"
           className="nav_img"
         />
-        <span>RECIPEQUEST</span>
+        <span>Recipe Finder</span>
       </div>
       <div className="search_bar">
         <input
